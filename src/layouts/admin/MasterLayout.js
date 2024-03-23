@@ -2,8 +2,13 @@ import React from "react";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-import "../../assets/admin/css/styles.css"
-import "../../assets/admin/js/scripts"
+
+import "../../assets/admin/css/styles.css";
+import "../../assets/admin/js/scripts";
+
+// import routes from "../../routes/routes";
+// import { Routes, Route, Outlet } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 
 const MasterLayout = () => {
   return (
@@ -11,18 +16,16 @@ const MasterLayout = () => {
       <Navbar />
 
       <div id="layoutSidenav">
-
         <div id="layoutSidenav_nav">
-            <Sidebar/>
+          <Sidebar />
         </div>
 
         <div id="layoutSidenav_content">
-            <main>
-                Kontol
-            </main>
-            <Footer />
+          <main>
+            <Outlet />
+          </main>
+          <Footer />
         </div>
-
       </div>
     </div>
   );
